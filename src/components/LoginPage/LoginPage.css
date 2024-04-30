@@ -1,0 +1,145 @@
+.login-page-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+}
+.login-main {
+  display: flex;
+  margin-top: 25px;
+}
+
+.login-phone-image {
+  /* max-width:380px; */
+  /* height:500px; */
+  display: none;
+  height: 635px;
+  width: 380px;
+  /* position: relative;*/
+  background: url("../../images/phone.png") no-repeat center;
+  margin-right: 25px;
+  /* background: red; */
+}
+.login-phone-slide {
+  position: absolute;
+  /* bottom: 43px;
+  left: 411px; */
+  margin: 25px 0 0 115px;
+  transition: 1s;
+}
+.image-transition {
+  filter:blur(10px);
+}
+
+@media screen and (min-width: 1024px) {
+  .login-phone-image {
+    display: block;
+  }
+}
+.login-logo {
+  max-width: 200px;
+  margin-top: 25px;
+}
+.login-right-component {
+  /* margin-top: 25px; */
+  width: 350px;
+  /* height:400px; */
+}
+.login-signin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 25px;
+  border: 1px solid #dbdbdb;
+  text-align: center;
+  /* background-color: white; */
+  padding-bottom: 25px;
+}
+.login-input {
+  width: 260px;
+  height: 35px;
+  margin: 5px 50px;
+  border: 1px solid #dbdbdb;
+  border-radius: 4px;
+  /* background-color: #fafafa; */
+  padding-left: 10px;
+}
+.login-input:focus {
+  outline: 1px solid #a8a8a8;
+}
+
+.login-submit {
+  margin-top: 10px;
+  width: 275px;
+  height: 35px;
+  border-radius: 10px;
+  font-weight: 500;
+  border: none;
+  background-color: #4cb5f9;
+  color: white;
+  cursor: pointer;
+}
+.login-or-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.login-divider {
+  width: 110px;
+  height: 0px;
+  border: 1px solid #dbdbdb;
+}
+.login-or {
+  margin: 0 25px;
+  font-weight: 500;
+  color: #8e8e8e;
+}
+.login-google {
+  margin-top: 30px;
+  color: #385185;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.login-google-logo {
+  max-width: 15px;
+  margin-right: 5px;
+}
+.login-forgot {
+  color: #385185;
+  font-size: 12px;
+  line-height: 14px;
+  margin-top: 12px;
+  text-align: center;
+  cursor: pointer;
+}
+.login-signup-option {
+  margin-top: 25px;
+  width: 350px;
+  height: 36px;
+  padding-top:10px;
+  padding-bottom: 10px;
+  border: 1px solid #dbdbdb;
+  /* background-color: white; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login-signup-option-link {
+  font-weight: 500;
+  color: #0395f6;
+  cursor: pointer;
+}
+.login-stores {
+  margin-top: 20px;
+  text-align: center;
+}
+.login-stores-logos {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  gap: 15px;
+  cursor: pointer;
+}

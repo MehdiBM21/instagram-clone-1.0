@@ -1,0 +1,35 @@
+.info-container {
+  display: flex;
+  
+  width: 300px;
+  height: 56px;
+  margin-top: 50px;
+  gap:12px;
+}
+.info-avatar {
+  min-width: 55px;
+  min-height: 55px;
+}
+.info-text{
+    font-size: 14px;
+    margin-right: auto;
+}
+.info-username{
+    font-weight: 500;
+}
+.info-bio{
+    color: #737373;
+}
+.info-switch{
+    font-weight: 500;
+    color: #0095f6;
+    cursor: pointer;
+    font-size: 12px;
+    align-self: center;
+}
+.info-switch:hover{
+    color: #00376B;
+}
+.info-switch:active{
+    color: #7F9BB5;
+}

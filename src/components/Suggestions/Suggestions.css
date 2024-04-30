@@ -1,0 +1,65 @@
+
+.suggestions-container{
+    width: 300px;
+    height: 56px;
+    margin-top: 25px;
+}
+.suggestions-title{
+    display: flex;
+    align-items: center;
+}
+.suggestions-foryou{
+    font-weight: 500;
+    font-size: 15px;
+    color: #737373;
+    margin-right: auto;
+}
+.suggestions-seeall{
+    font-weight: 500;
+    color: #00376B;
+    cursor: pointer;
+    font-size: 12px;
+}
+.suggestions-seeall:hover{
+    color: #7F9BB5;
+}
+
+.suggestions-users-container{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+}
+.suggestions-users{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+}
+.suggestions-user-avatar{
+    min-width: 45px;
+    min-height: 45px;
+}
+.suggestions-user-text{
+    font-size: 15px;
+    margin-right: auto;
+}
+.suggestions-username{
+    font-weight: 500;
+}
+.suggestions-bio{
+    color: #737373;
+}
+.suggestions-follow{
+    font-weight: 500;
+    color: #0095f6;
+    cursor: pointer;
+    font-size: 12px;
+}
+.suggestions-follow:hover{
+    color: #00376B;
+}
+.suggestions-follow:active{
+    color: #7F9BB5;
+}

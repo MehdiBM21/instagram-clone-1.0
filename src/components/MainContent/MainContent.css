@@ -1,0 +1,8 @@
+.main-info-container{
+    display: none;
+}
+@media screen and (min-width: 1024px) {
+    .main-info-container {
+      display: block;
+    }
+  }

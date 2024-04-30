@@ -1,0 +1,90 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.post-container{
+    
+    width:90%;
+    /* height: 700px; */
+    border: 1px solid #DBDBDB;
+    background-color: white;
+    margin-top: 25px;
+
+}
+.post-header{
+    height: 60px;
+    border-bottom: 1px solid #DBDBDB;
+    display: flex;
+    align-items: center;
+    gap:12px;
+}
+.post-header-username{
+    margin: 0;
+    padding: 0;
+    font-weight: 500;
+    font-size: 15px;
+    margin-right: auto;
+
+}
+.post-header-image{
+    min-width: 40px;
+    min-height: 40px;
+    margin-left: 10px;
+}
+.post-header a{
+    color: inherit; 
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 25px;
+    margin-right: 25px;
+    margin-bottom: 10px;
+}
+
+.post-image{
+    width: 100%;
+}
+.post-reactions{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 5px;
+}
+.post-reactimage{
+    width:25px;
+    height: 25px;
+    margin:5px;   
+}
+.post-likes{
+    font-weight: 500;
+    margin-left: 10px;
+}
+.post-comments{
+    font-size: 15px;
+}
+.post-comments p{
+    margin: 10px;
+}
+.post-comments span{
+    font-weight: 500;
+}
+.post-comments a{
+    color: #737373; 
+    text-decoration: none;
+    /* font-weight: 500; */
+    font-size: 15px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+.post-commentbox{
+    width:  100%;
+    height: 55px;
+    border: none;
+    /* border-top: none; */
+    font-size: 16px;
+    padding-left: 10px;
+}
+.post-commentbox:focus{
+    outline: none;
+}
