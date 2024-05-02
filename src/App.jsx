@@ -6,18 +6,21 @@ import HomePageV2 from "./components/HomePageV2/HomePageV2";
 import PageLayout from "./Layouts/PageLayout/PageLayout";
 import { auth } from "./config/firebase";
 import { useEffect, useState } from "react";
+import useAuthStore from "./store/authStore";
+import { useAuthState } from "react-firebase-hooks/auth";
 
 function App() {
-  const [user, setUser] = useState(null);
+  const [authUser] = useAuthState(auth);
+  // const [user, setUser] = useState(null);
 
-  useEffect(() => {
-    const unsubscribe = auth.onAuthStateChanged((user) => {
-      setUser(user);
-    });
+  // useEffect(() => {
+  //   const unsubscribe = auth.onAuthStateChanged((user) => {
+  //     setUser(user);
+  //   });
 
-    // Cleanup function
-    return () => unsubscribe();
-  }, []);
+  //   // Cleanup function
+  //   return () => unsubscribe();
+  // }, []);
 
   return (
    
@@ -25,11 +28,11 @@ function App() {
         <Routes>
         <Route
             path="/auth"
-            element={user ? <Navigate to="/home" /> : <LoginPage />}
+            element={authUser ? <Navigate to="/" /> : <LoginPage />}
           />
           <Route
-            path="/home"
-            element={user ? <HomePageV2 /> : <Navigate to="/auth" />}
+            path="/"
+            element={authUser ? <HomePageV2 /> : <Navigate to="/auth" />}
           />
         </Routes>
       </PageLayout>

@@ -8,7 +8,7 @@ import useSignUpWithEmailAndPassword from "../../hooks/useSignUpWithEmailAndPass
 
 export default function SignUp() {
   const [showPassword, setShowPassword] = useState(false);
-  const navigate = useNavigate();
+  const {loading, error, signup} = useSignUpWithEmailAndPassword();
   const [form, setForm] = useState({
     email: "",
     fullName: "",
@@ -16,7 +16,7 @@ export default function SignUp() {
     password: "",
   });
 
-  const {loading, error, signup} = useSignUpWithEmailAndPassword();
+  
 
   function handleChange(event) {
     const { name, value } = event.target;

@@ -5,6 +5,9 @@ import pp1 from "../../images/pp1.png";
 import pp2 from "../../images/pp2.png";
 import uploadStatus from "../../images/statusadd.png";
 import { Avatar, Flex, Text, VStack } from "@chakra-ui/react";
+import { v4 as uuidv4 } from 'uuid';
+
+
 
 export default function StatusBar() {
   const [statusList, setStatusList] = useState([]);
@@ -56,6 +59,7 @@ export default function StatusBar() {
   return (
     <>
       <Flex
+        key={uuidv4()}
         className='statusbar-container'
         alignItems={"center"}
         justifyContent={"space-around"}
@@ -71,7 +75,7 @@ export default function StatusBar() {
         {statusList.map((status) => (
           // <div className='statusbar-status'>
 
-          <VStack className='statusbar-status'>
+          <VStack className='statusbar-status' key={uuidv4()}>
             <Avatar className='statusbar-img' size={"md"} />
             {/* <p className='statusbar-text' style={{maxWidth:"50px", overflow:"hidden"}}>{status.username}</p> */}
             <Text fontSize={12} overflow={"hidden"}>

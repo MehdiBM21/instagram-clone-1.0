@@ -8,17 +8,7 @@ import { auth } from "../../config/firebase";
 import { useNavigate } from "react-router-dom";
 
 const SidebarItems = () => {
-	const navigate = useNavigate();
-	async function logOut() {
-		//TODO:: remove this function from here
-		try {
-		  await signOut(auth);
-		  navigate("/auth");
-		//   console.log(userCredential);
-		} catch (error) {
-		  console.log(error);
-		}
-	  };
+	
 	return (
 		<>
 			<Home />
@@ -26,8 +16,6 @@ const SidebarItems = () => {
 			<Notifications />
 			{/* <CreatePost /> */}
 			<ProfileLink />
-
-			<button onClick={logOut}>Log out</button>
 		</>
 	);
 };

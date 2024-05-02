@@ -14,6 +14,7 @@ import SignIn from '../SignIn/SignIn';
 import SignUp from '../SignUp/SignUp';
 import { useState, useEffect } from 'react';
 import { InstagramLogo } from '../../assets/constants';
+import GoogleAuth from '../GoogleAuth/GoogleAuth';
 
 
 export default function LoginPage(){
@@ -107,13 +108,8 @@ export default function LoginPage(){
                                             <div className="login-or">OR</div>
                                             <div className="login-divider"></div>
                                         </div>
-                                        <div className="login-google">
-                                            <img src={google_logo} 
-                                                alt="Google logo" 
-                                                className="login-google-logo"
-                                            />
-                                            Log in with Google
-                                            </div>
+
+                                            <GoogleAuth type={renderLogin ? "Log in" : "Sign Up"}/>
                                         <div className="login-forgot">Forgot Password?</div>
                                 </div>
                             
@@ -133,7 +129,7 @@ export default function LoginPage(){
                                     <span 
                                     className='login-signup-option-link'
                                     onClick={handleSignOption}>
-                                        Sign {renderLogin? "Up" : "In"}
+                                        {renderLogin? "Sign Up" : "Log in"}
                                     </span>
                                 </div>
                             </div>
