@@ -14,7 +14,7 @@ const FeedPosts = () => {
 
   return (
     <>
-  <Flex >
+  <Flex justifyContent={"center"} >
       <StatusBar/>
       </Flex>
     <Container maxW={"container.sm"} py={0} px={2}>
