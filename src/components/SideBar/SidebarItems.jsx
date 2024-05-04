@@ -6,6 +6,7 @@ import ProfileLink from "./ProfileLink";
 import Search from "./Search";
 import { auth } from "../../config/firebase";
 import { useNavigate } from "react-router-dom";
+import SendMessage from "./SendMessage";
 
 const SidebarItems = () => {
 	
@@ -14,6 +15,7 @@ const SidebarItems = () => {
 			<Home />
 			<Search />
 			<Notifications />
+			<SendMessage/>
 			{/* <CreatePost /> */}
 			<ProfileLink />
 		</>

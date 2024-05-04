@@ -10,6 +10,7 @@ const PageLayout = ({ children }) => {
   const [user, loading, error] = useAuthState(auth);
   const renderSidebar = pathname !== "/auth" && user;
   const renderNavbar = !user && pathname !== "/auth" && !loading ;
+  // const SidebarWidth = user && pathname =="/chat"
   
 //  check if user is logged
 if(!user && loading){
