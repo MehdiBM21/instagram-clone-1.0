@@ -83,10 +83,12 @@
 // export default Search;
 
 // COPY AND PASTE AS THE STARTER CODE FOR THE SEARCH COMPONENT
-import { Box, Flex, Tooltip } from "@chakra-ui/react";
-import { SearchLogo } from "../../assets/constants";
+import {Box, Flex, Tooltip, useColorMode} from "@chakra-ui/react";
+import { LuSearch } from "react-icons/lu";
 
-const Search = () => {
+const Search = ({colorMode}) => {
+
+
 	return (
 		<>
 			<Tooltip
@@ -100,13 +102,13 @@ const Search = () => {
 				<Flex
 					alignItems={"center"}
 					gap={4}
-					_hover={{ bg: "whiteAlpha.400" }}
+					_hover={colorMode==="dark"?{ bg: "whiteAlpha.400" }:{ bg: "blackAlpha.100" }}
 					borderRadius={6}
 					p={2}
 					w={{ base: 10, md: "full" }}
 					justifyContent={{ base: "center", md: "flex-start" }}
 				>
-					<SearchLogo />
+					<LuSearch  size={27} />
 					<Box display={{ base: "none", md: "block" }}>Search</Box>
 				</Flex>
 			</Tooltip>

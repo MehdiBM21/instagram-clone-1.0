@@ -8,22 +8,22 @@ import { useEffect, useState } from "react";
 const Messages = () => {
   const selectedUser = useChatStore((state) => state.user);
   const [messages, setMessages] = useState([]);
-  console.log(selectedUser);
-  console.log("selected user from messages component: ")
-  console.log(selectedUser);
+  // console.log(selectedUser);
+  // console.log("selected user from messages component: ")
+  // console.log(selectedUser);
 
   useEffect(() => {
    const unSub = onSnapshot(doc(firestore, "chats", selectedUser.chatId), (doc) => {
 
     doc.exists() && setMessages(doc.data().messages);
-    console.log(messages);
+    // console.log(messages);
    })
 
     return () => {
       unSub();
     };
   }, [selectedUser.chatId]);
-  console.log(messages);
+  // console.log(messages);
   return (
     
     <>

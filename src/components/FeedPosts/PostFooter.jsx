@@ -1,5 +1,7 @@
 import { Box, Button, Flex, Input, InputGroup, InputRightElement, Text } from "@chakra-ui/react";
 import { useState } from "react";
+import {GoHeart, GoHeartFill} from "react-icons/go";
+import { RiChat3Line } from "react-icons/ri";
 import {
   CommentLogo,
   NotificationsLogo,
@@ -18,11 +20,11 @@ const PostFooter = (props) => {
     <Box mb={10}>
       <Flex alignItems={"center"} gap={4} w={"full"} pt={0} mb={2} mt ={4}>
         <Box onClick={handleLike} cursor={"pointer"} fontSize={18}>
-          {!liked ? <NotificationsLogo /> : <UnlikeLogo />}
+          {!liked ? <GoHeart size={25} strokeWidth={0.5} /> : <GoHeartFill size={25} strokeWidth={1} color="red"/>}
         </Box>
 
         <Box cursor={"pointer"} fontSize={18}>
-          <CommentLogo />
+          <RiChat3Line size={25}  />
         </Box>
       </Flex>
       <Text fontWeight={600} fontSize={"sm"} mb={1}>
