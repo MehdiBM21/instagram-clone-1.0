@@ -6,7 +6,7 @@ import useAuthStore from "../../store/authStore";
 const ProfileLink = () => {
 	const authUser = useAuthStore((state) => state.user);
 	// const authUser = {};
-
+	
 	return (
 		<Tooltip
 			hasArrow

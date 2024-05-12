@@ -1,11 +1,13 @@
 import {useState} from 'react';
-import {useAuthState} from "react-firebase-hooks/auth";
-import {doc} from "firebase/firestore";
+import {arrayUnion, doc, updateDoc} from "firebase/firestore";
 import {firestore} from "../config/firebase";
+import useShowToast from './useShowToast';
+import usePostStore from '../store/postStore';
+import useAuthStore from '../store/authStore';
 const usePostComment=() => {
 const [isCommenting,setIsCommenting]=useState(false);
     const showToast=useShowToast();
-    const authUser = useAuthState(state => state.user)
+    const authUser = useAuthStore(state => state.user)
     const addComment=usePostStore(state => state.addComment); //pour afficher le commentaire
     const handlePostComment=async (postId,comment) => {
     if(isCommenting) return;

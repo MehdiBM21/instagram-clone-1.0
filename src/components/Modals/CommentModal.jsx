@@ -33,7 +33,7 @@ const CommentsModal = ({ isOpen, onClose, post }) => {
                 scrollToBottom();
             }, 100);
         }
-    }, [isOpen, post.comments.length]);
+    }, []);
 
     return (
         <Modal isOpen={isOpen} onClose={onClose} motionPreset='slideInLeft'>

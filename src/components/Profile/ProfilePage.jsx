@@ -15,11 +15,11 @@ const ProfilePage = () => {
 	const { username } = useParams();
 	let { isLoading, userProfile } = useGetUserProfileByUsername(username);
 
-	useEffect(() => {
-			 // {  userProfile } = useGetUserProfileByUsername(username);
-			console.log(userProfile);
-		}
-		,[username])
+	// useEffect(() => {
+	// 		//  {  userProfile } = useGetUserProfileByUsername(username);
+	// 		// console.log(userProfile);
+	// 	}
+	// 	,[username])
 
 
 	const userNotFound = !isLoading && !userProfile;

@@ -7,6 +7,8 @@ import Search from "./Search";
 import { auth } from "../../config/firebase";
 import { useNavigate } from "react-router-dom";
 import SendMessage from "./SendMessage";
+import CreatePost from "./CreatePost";
+
 
 const SidebarItems = () => {
 	
@@ -16,7 +18,7 @@ const SidebarItems = () => {
 			<Search />
 			<Notifications />
 			<SendMessage/>
-			{/* <CreatePost /> */}
+			<CreatePost />
 			<ProfileLink />
 		</>
 	);

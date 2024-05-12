@@ -33,7 +33,7 @@ const InputPanel = () => {
   const handleSend = async (e) => {
     if (e.key === "Enter" && text !== "") {
       if (image) {
-        const storageRef = ref(storage, v4());
+        const storageRef = ref(storage, `chats/${v4()}`);
         const uploadTask = uploadBytesResumable(storageRef, image);
         uploadTask.on(
           (error) => {

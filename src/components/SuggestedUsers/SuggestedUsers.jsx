@@ -1,14 +1,20 @@
 import { Box, Flex, Link, Text, VStack } from "@chakra-ui/react";
 import SuggestedHeader from "./SuggestedHeader";
 import { color } from "framer-motion";
+import useGetSuggestedUsers from "../../hooks/useGetSuggestedUsers";
 import SuggestedUser from "./SuggestedUser";
 
 const SuggestedUsers = () => {
+  const {isLoading, suggestedUsers} = useGetSuggestedUsers();
+
+  //TODO: instead of null, return a SKELETON
+  if (isLoading) return null;
+
   return (
     <VStack py={8} px={6} gap={4}>
       <SuggestedHeader />
 
-      <Flex alignItems={"center"} justifyContent={"space-between"} w={"full"}>
+    {suggestedUsers.length > 0 &&  (<Flex alignItems={"center"} justifyContent={"space-between"} w={"full"}>
         <Text fontSize={12} fontWeight={"bold"} color={"gray.500"}>
           Suggested for you
         </Text>
@@ -21,11 +27,11 @@ const SuggestedUsers = () => {
         >
           See all
         </Text>
-      </Flex>
-      <SuggestedUser username="Mehdi_Baallal" followers={1503} avatar="https://picsum.photos/500"/>
-      <SuggestedUser username="Nassim_Mita" followers={1600} avatar="https://picsum.photos/501"/>
-      <SuggestedUser username="Ennouass_Mohammed" followers={1430} avatar="https://picsum.photos/502"/>
-
+      </Flex>)}
+     
+     {suggestedUsers.map((user) => (
+        <SuggestedUser key={user.id} user={user} />
+      ))}
       <Box fontSize={12} color={"gray.500"} mt={5} alignSelf={"start"}>
         © 2024 Built By{" "}
         <Link

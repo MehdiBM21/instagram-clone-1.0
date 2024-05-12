@@ -20,13 +20,13 @@ const useGetUserProfileById = (userId) => {
 				}
 			} catch (error) {
 				showToast("Error", error.message, "error");
-				console.log(error);
+				console.error(error);
 			} finally {
 				setIsLoading(false);
 			}
 		};
 		getUserProfile();
-	}, [showToast,setUserProfile,userId]);
+	}, [setUserProfile, userId]);
 
 	return { isLoading, userProfile, setUserProfile };
 };

@@ -21,6 +21,7 @@ const Message = (props) => {
         gap={2}
         alignItems={"center"}
         flexDir={isOwner ? "row-reverse" : "row"}
+        ref={ref}
       >
         <Avatar size={"sm"} src={isOwner ?  authUser?.profilePicURL: selectedUser?.user.profilePicUrl } />
         <Box
