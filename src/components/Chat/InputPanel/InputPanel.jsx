@@ -25,9 +25,11 @@ import { firestore, storage } from "../../../config/firebase";
 import { v4 } from "uuid";
 import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
 
+
 const InputPanel = () => {
   const [text, setText] = useState("");
   const [image, setImage] = useState(null);
+  // const [currentEmoji, setCurrentEmoji] = useState(null);
   const authUser = useAuthStore((state) => state.user);
   const selectedUser = useChatStore((state) => state.user);
   const handleSend = async (e) => {
@@ -50,7 +52,7 @@ const InputPanel = () => {
                     id: v4(),
                     text: text,
                     senderId: authUser.uid,
-                    date: Timestamp.now(),
+                    date: Date.now(),
                     img: downloadURL,
                   }),
                 });
@@ -64,7 +66,7 @@ const InputPanel = () => {
             id: v4(),
             text: text,
             senderId: authUser.uid,
-            date: Timestamp.now(),
+            date: Date.now(),
           }),
         });
       }

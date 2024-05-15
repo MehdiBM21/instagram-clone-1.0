@@ -1,5 +1,5 @@
 import { Box,  Flex } from "@chakra-ui/react";
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import ChatSidebar from "../../components/Chat/ChatSidebar/ChatSidebar";
 import Messages from "../../components/Chat/Messages/Messages";
 import InputPanel from "../../components/Chat/InputPanel/InputPanel";
@@ -8,8 +8,10 @@ import SearchUser from "../../components/Chat/SearchUser/SearchUser";
 import useChatStore from "../../store/chatStore";
 
 const ChatPage = () => {
-    const [showSearch, setShowSearch] = React.useState(false)
+    const [showSearch, setShowSearch] = useState(false)
     const selectedUser = useChatStore((state) => state.user);
+    // const [renderEmojiPanel, setRenderEmojiPanel] = useState(false);
+
     
   return (
     <>
@@ -27,8 +29,8 @@ const ChatPage = () => {
             
             <Flex direction={"column"} h='full' justifyContent={"space-between"} pb={5}>
             <ChatNavbar />
-          {selectedUser && <Messages/>}
-          <InputPanel/>
+          {selectedUser && <Messages />}
+          <InputPanel />
           </Flex>
         </Box>
       </Flex>

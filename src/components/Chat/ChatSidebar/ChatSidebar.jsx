@@ -20,6 +20,7 @@ const ChatSidebar = (props) => {
         top={0}
         left={0}
         px={{ base: 1}}
+       
       >
         <Flex direction={"column"} gap={10} w='full' height='full'>
         <Box

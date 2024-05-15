@@ -10,7 +10,7 @@ const ChatItem = (props) => {
         p={{ base: 1, md: 2 }}
         w={{ base: 10, md: "full" }}
       >
-        {/* //TODO:: add user avatar */}
+    
         <Avatar size={{ base: "sm", md: "md" }} src={props.profilePicUrl} />
         <Box display={{ base: "none", md: "block" }}>
           <Text>{props.username}</Text>

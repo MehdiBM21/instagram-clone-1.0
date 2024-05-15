@@ -1,9 +1,11 @@
-import { Flex } from "@chakra-ui/react";
+import { Box, Flex } from "@chakra-ui/react";
 import Message from "./Message";
 import useChatStore from "../../../store/chatStore";
 import { doc, onSnapshot } from "firebase/firestore";
 import { firestore } from "../../../config/firebase";
 import { useEffect, useState } from "react";
+import  Picker  from "@emoji-mart/react";
+import data from "@emoji-mart/data";
 
 const Messages = () => {
   const selectedUser = useChatStore((state) => state.user);
@@ -27,21 +29,17 @@ const Messages = () => {
   return (
     
     <>
-    <Flex flexDir={"column"} gap={3} p={10} overflowY={"scroll"} h={"calc(100vh - 160px)"}>
+    
+    <Flex flexDir={"column"} gap={3} p={10} overflowY={"scroll"} h={"calc(100vh - 160px)"}  >
       {messages?.map((m) => (
       //  console.log(m) ,
        <Message message={m} key={m.id}/>
       ))}
-      {/* <Message isOwner={true}/>
-      <Message />
-      <Message imageUrl="https://picsum.photos/500/700"/>
-      <Message isOwner={true}/>
-      <Message />
-      <Message />
-      <Message />
-      <Message />
-      <Message /> */}
+     
       </Flex>
+     {/* <Box z-index={990}>{renderEmojiPanel && 
+          <Picker data={data} previewPostion="none"/>}
+          </Box> */}
     </>
   );
 };

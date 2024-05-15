@@ -22,6 +22,11 @@ const useLikePost=(post)=>{
             })
             setIsliked(!isLiked);
             isLiked ? setLikes(likes-1) : setLikes(likes+1);
+//update user likes
+            const userRef=doc(firestore, 'users',authUser.uid);
+            await updateDoc(userRef,{
+                likes:isLiked ? arrayRemove(post.id):arrayUnion(post.id)
+            })
 
         }catch (error){
             showToast('Error',error.message,'error');

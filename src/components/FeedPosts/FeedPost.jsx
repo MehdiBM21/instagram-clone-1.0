@@ -6,7 +6,7 @@ import useGetUserProfileById from '../../hooks/useGetUserProfileById';
 const FeedPost = ({post}) => {
   const {userProfile} = useGetUserProfileById(post.createdBy);
   // console.log(post);
-  // console.log(userProfile);
+  console.log(userProfile);
   return (
     <>
     
